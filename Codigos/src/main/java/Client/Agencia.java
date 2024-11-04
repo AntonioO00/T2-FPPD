@@ -36,10 +36,14 @@ public class Agencia {
                     break;
                 case 4:
                     clienteBanco.fecharConta(nConta);
+                    clienteBanco.encerrar();
                     continuar = false;
+                    System.exit(0);
                     break;
                 case 5:
+                    clienteBanco.encerrar();
                     continuar = false;
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Opção inválida! Tente novamente.");

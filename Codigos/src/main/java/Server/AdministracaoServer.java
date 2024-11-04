@@ -51,7 +51,7 @@ public class AdministracaoServer extends UnicastRemoteObject implements BancoInt
         if (contas.containsKey(numeroConta)) {
             contas.put(numeroConta, contas.get(numeroConta) + valor);
             System.out.println("Depósito de " + valor + " na conta " + numeroConta + " realizado.");
-            operacoes.put(operacaoId, true); // Marcar a operação como concluída
+            operacoes.put(operacaoId, true);
         } else {
             System.out.println("Conta " + numeroConta + " não encontrada.");
         }
@@ -67,7 +67,7 @@ public class AdministracaoServer extends UnicastRemoteObject implements BancoInt
         if (contas.containsKey(numeroConta) && contas.get(numeroConta) >= valor) {
             contas.put(numeroConta, contas.get(numeroConta) - valor);
             System.out.println("Saque de " + valor + " na conta " + numeroConta + " realizado.");
-            operacoes.put(operacaoId, true); // Marcar a operação como concluída
+            operacoes.put(operacaoId, true); 
             return true;
         } else {
             System.out.println("Conta " + numeroConta + " não encontrada ou saldo insuficiente.");

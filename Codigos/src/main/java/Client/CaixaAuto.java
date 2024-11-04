@@ -36,8 +36,9 @@ public class CaixaAuto {
                     System.out.println("Saldo : " + saldo);
                     break;
                 case 4:
+                    clienteBanco.encerrar();
                     continuar = false;
-                    break;
+                    System.exit(0);
                 default:
                     System.out.println("Opção inválida! Tente novamente.");
             }
